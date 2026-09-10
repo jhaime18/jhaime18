@@ -1,3 +1,272 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@theme {
+  --color-noir: #120c0e;
+  --color-noir-soft: #1d1417;
+  --color-noir-line: #2e1f23;
+
+  --color-strawberry: #e8384f;
+  --color-strawberry-deep: #a81f35;
+  --color-strawberry-light: #ff9aab;
+
+  --color-leaf: #86ad61;
+  --color-leaf-deep: #55793a;
+
+  --color-cream: #f4ece9;
+  --color-muted: #a68d92;
+
+  --font-display: "Fraunces", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-noir font-mono text-cream antialiased;
+  }
+
+  ::selection {
+    @apply bg-strawberry/30 text-cream;
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-strawberry-light;
+  }
+}
+
+@utility glass {
+  @apply border border-white/10 bg-noir-soft/50 backdrop-blur-xl;
+}
+
+@utility ambient-blob {
+  @apply pointer-events-none absolute rounded-full blur-3xl;
+}
+
+/* Clickable boxes */
+@utility panel-btn {
+@apply glass
+  relative
+  flex
+  min-h-20
+  w-full
+  flex-col
+  items-center
+  justify-center
+  overflow-hidden
+  rounded-[1.5rem]
+  px-5
+  py-4
+  text-center
+  transition-all
+  duration-300
+  hover:-translate-y-1
+  hover:border-strawberry/40
+  hover:bg-noir-soft/80
+  hover:shadow-[0_20px_50px_-20px_rgba(232,56,79,0.25)]
+  active:translate-y-0;
+}
+
+@utility panel-title {
+  @apply font-display
+    text-3xl
+    italic
+    text-cream
+    transition-colors
+    duration-300
+    group-hover:text-strawberry-light
+    sm:text-4xl;
+}
+
+@utility panel-subtitle {
+  @apply mt-2 text-xs text-muted transition-colors duration-300 group-hover:text-cream;
+}
+
+@utility meta-link {
+  @apply text-muted
+    underline
+    decoration-noir-line
+    underline-offset-4
+    transition-colors
+    duration-200
+    hover:text-strawberry-light
+    hover:decoration-strawberry-light;
+}
+
+@utility section-heading {
+  @apply font-display
+    text-2xl
+    italic
+    text-cream
+    sm:text-3xl;
+}
+
+@utility modal-shell {
+  @apply glass
+    max-h-[85vh]
+    w-full
+    max-w-6xl
+    overflow-y-auto
+    rounded-[1.75rem]
+    bg-noir-soft/95
+    shadow-[0_25px_90px_-20px_rgba(0,0,0,0.85)];
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modal-shell::-webkit-scrollbar {
+  display: none;
+}
+
+@utility modal-head {
+  @apply sticky
+    top-0
+    z-10
+    flex
+    items-center
+    justify-between
+    border-b
+    border-noir-line
+    bg-noir-soft/95
+    px-6
+    py-5
+    backdrop-blur-xl
+    sm:px-8;
+}
+
+@utility modal-body {
+  @apply space-y-8
+    px-6
+    py-7
+    sm:px-8;
+}
+
+@utility tag {
+  @apply rounded-full
+    border
+    border-leaf/30
+    bg-leaf/10
+    px-3
+    py-1
+    text-[11px]
+    text-leaf;
+}
+
+@utility field-label {
+  @apply mb-2
+    block
+    text-xs
+    text-muted;
+}
+
+@utility field {
+  @apply w-full
+    rounded-xl
+    border
+    border-white/10
+    bg-noir/60
+    px-4
+    py-3
+    text-sm
+    text-cream
+    placeholder:text-muted/60
+    transition-colors
+    duration-200
+    focus-visible:border-strawberry/60;
+}
+
+@utility btn-primary {
+  @apply rounded-xl
+    bg-strawberry
+    px-5
+    py-3
+    text-sm
+    font-medium
+    text-noir
+    transition-colors
+    duration-200
+    hover:bg-strawberry-light;
+}
+
+@utility btn-ghost {
+  @apply rounded-xl
+    border
+    border-white/10
+    px-4
+    py-2
+    text-xs
+    text-muted
+    transition-colors
+    duration-200
+    hover:border-strawberry/40
+    hover:text-cream;
+}
+
+@utility timeline-item {
+  @apply relative
+    border-l
+    border-noir-line
+    pb-8
+    pl-6
+    last:pb-0;
+}
+
+@utility timeline-dot {
+  @apply absolute
+    -left-[5px]
+    top-1.5
+    h-2.5
+    w-2.5
+    rounded-full
+    border-2
+    border-noir-soft
+    bg-strawberry;
+}
+
+@utility status-dot {
+  @apply relative
+    inline-flex
+    h-2
+    w-2
+    rounded-full
+    bg-leaf;
+}
+
+@utility rise-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise 0.7s ease-out forwards;
+}
+
+.status-dot::after {
+  content: "";
+  @apply absolute
+    inset-0
+    animate-ping
+    rounded-full
+    bg-leaf/70;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+

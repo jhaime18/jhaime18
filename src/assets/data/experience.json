@@ -1,0 +1,31 @@
+[
+  {
+    "role": "Part-Time Software Engineer",
+    "company": "Elinnov Technologies, Inc.",
+    "period": "Nov 2025 — May 2026",
+    "bullets": [
+      "Resolved a critical production data-consistency issue affecting 200,000+ records, restoring data integrity and system reliability.",
+      "Automated weekly reporting, cutting processing time from 1–2 hours to under a minute.",
+      "Resolved recurring production issues across two concurrent client projects, keeping service uninterrupted.",
+      "Delivered major releases across client projects while maintaining system stability."
+    ]
+  },
+  {
+    "role": "Software Engineer Intern",
+    "company": "Elinnov Technologies, Inc.",
+    "period": "Jul 2025 — Oct 2025",
+    "bullets": [
+      "Built a full-stack data export application from scratch, letting the data team process and export 200,000+ records efficiently.",
+      "Resolved recurring bugs and shipped feature enhancements across two client projects, improving product stability.",
+      "Earned the Rising Star Award for excellence in front-end development and web integration."
+    ]
+  },
+  {
+    "role": "IT Intern — Sales-Technical Department",
+    "company": "Print Depot, Inc.",
+    "period": "Jul 2023 — Aug 2023",
+    "bullets": [
+      "Created standardized report and documentation templates, improving consistency for project manager operations."
+    ]
+  }
+]

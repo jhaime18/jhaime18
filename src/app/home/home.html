@@ -1,0 +1,588 @@
+<!-- Ambient background -->
+<div class="fixed inset-0 -z-10 overflow-hidden bg-noir">
+  <div
+    class="ambient-blob left-[-10%] top-[-15%] h-[420px] w-[420px] bg-strawberry/20"
+  ></div>
+
+  <div
+    class="ambient-blob bottom-[-15%] right-[-10%] h-[460px] w-[460px] bg-leaf/10"
+  ></div>
+</div>
+
+<!-- Main single card -->
+<div
+  class="mx-auto flex min-h-dvh w-full max-w-7xl items-center px-4 py-4 sm:px-6 sm:py-8"
+>
+  <div
+    class="glass rise-in w-full overflow-hidden rounded-[2rem] shadow-[0_25px_90px_-20px_rgba(0,0,0,0.85)]"
+  >
+    <!-- Header -->
+    <header
+      class="flex flex-col gap-6 border-b border-noir-line px-6 py-7 sm:flex-row sm:items-end sm:justify-between sm:px-8 sm:py-8 lg:px-10"
+    >
+      <div>
+        <p class="mb-2 flex items-center gap-2 text-xs text-muted">
+          <span class="status-dot"></span>
+          Open to opportunities
+        </p>
+
+        <h1
+          class="font-display text-4xl italic leading-none text-cream sm:text-5xl"
+        >
+          Jhaime Jose Cando
+        </h1>
+
+        <p class="mt-3 text-sm text-muted">
+          Junior Software Engineer · Manila, Philippines
+        </p>
+      </div>
+
+      <nav class="flex flex-col gap-1 text-sm sm:items-end">
+        <a
+          class="meta-link"
+          href="mailto:jhaime.jose.cando@gmail.com"
+        >
+          jhaime.jose.cando&#64;gmail.com
+        </a>
+
+        <a
+          class="meta-link"
+          href="https://github.com/jhaimec"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github.com/jhaimec
+        </a>
+
+        <a
+          class="meta-link"
+          href="https://linkedin.com/in/jhaime"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin.com/in/jhaime
+        </a>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section
+      class="border-b border-noir-line px-6 py-7 sm:px-8 sm:py-8 lg:px-10"
+    >
+        <p class="w-full text-sm leading-7 text-muted sm:text-base">
+          I&rsquo;m a Junior Software Engineer with a stronger focus on
+          backend development. I enjoy building APIs, working with databases,
+          solving data-intensive problems, and designing systems that are
+          reliable, maintainable, and practical.
+        </p>
+    </section>
+
+    <!-- Projects + Experience -->
+    <main
+      class="grid grid-cols-1 gap-5 px-6 py-6 sm:px-8 sm:py-8 md:grid-cols-2 lg:px-10"
+    >
+      <!-- Experience -->
+      <button
+        type="button"
+        class="group panel-btn rise-in"
+        style="animation-delay: 0.15s"
+        (click)="openModal('experience')"
+        aria-haspopup="dialog"
+        aria-controls="modal-experience"
+      >
+        <div
+          class="ambient-blob left-1/2 top-full h-56 w-56 -translate-x-1/2 bg-leaf/10 transition-colors group-hover:bg-leaf/20"
+        ></div>
+
+        <span class="relative z-10 panel-title">Experience</span>
+        <span class="relative z-10 panel-subtitle">
+          Work &amp; achievements
+        </span>
+      </button>
+
+      <!-- Projects -->
+      <button
+        type="button"
+        class="group panel-btn rise-in"
+        style="animation-delay: 0.05s"
+        (click)="openModal('projects')"
+        aria-haspopup="dialog"
+        aria-controls="modal-projects"
+      >
+        <div
+          class="ambient-blob left-1/2 top-full h-56 w-56 -translate-x-1/2 bg-strawberry/10 transition-colors group-hover:bg-strawberry/20"
+        ></div>
+
+        <span class="relative z-10 panel-title">Projects</span>
+        <span class="relative z-10 panel-subtitle">
+          View selected work
+        </span>
+      </button>
+    </main>
+
+    <!-- Supporting resume information -->
+    <section
+      class="grid grid-cols-1 gap-8 border-t border-noir-line px-6 py-7 sm:px-8 sm:py-8 md:grid-cols-2 lg:px-10"
+    >
+      <!-- Tech Stack -->
+      <div class="rise-in">
+        <p
+          class="mb-3 text-xs uppercase tracking-[0.18em] text-muted"
+        >
+          Tech Stack
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <span
+            *ngFor="let technology of techStack"
+            class="tag"
+          >
+            {{ technology }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Education + certificates -->
+      <div class="rise-in">
+        <div>
+          <p
+            class="mb-3 text-xs uppercase tracking-[0.18em] text-muted"
+          >
+            Education
+          </p>
+
+          <p class="text-sm text-cream">
+            BS in Computer Science
+          </p>
+
+          <p class="mt-1 text-xs text-muted">
+            Pamantasan ng Lungsod ng Maynila · 2020 — 2025
+          </p>
+        </div>
+
+        <div class="mt-6 border-t border-noir-line pt-6">
+          <p
+            class="mb-3 text-xs uppercase tracking-[0.18em] text-muted"
+          >
+            Certificates
+          </p>
+
+          <div class="space-y-3 text-sm text-muted">
+            <div>
+              <span class="text-cream">
+                Accenture Tech AmplifAI Program (AI &amp; Data Training)
+              </span>
+
+              <span class="text-strawberry-light">
+                · Nov 2025
+              </span>
+            </div>
+
+            <div>
+              <span class="text-cream">
+                CS50x: Introduction to Computer Science
+              </span>
+
+              <span class="text-strawberry-light">
+                · Dec 2022
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="px-6 pb-7 sm:px-8 sm:pb-8 lg:px-10">
+      <button
+        type="button"
+        class="group panel-btn rise-in"
+        style="animation-delay: 0.25s"
+        (click)="openModal('contact')"
+        aria-haspopup="dialog"
+        aria-controls="modal-contact"
+      >
+        <div
+          class="ambient-blob left-1/2 top-full h-64 w-64 -translate-x-1/2 bg-strawberry/10 transition-colors group-hover:bg-strawberry/20"
+        ></div>
+
+        <span class="relative z-10 panel-title">Contact Me</span>
+
+        <span class="relative z-10 panel-subtitle">
+          Let&rsquo;s work together
+        </span>
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-noir-line px-6 py-4 text-xs text-muted sm:px-8"
+    >
+      <p class="text-center">
+        © 2026 Jhaime Jose Cando. All rights reserved.
+      </p>
+    </footer>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- PROJECTS MODAL -->
+<!-- ========================================================= -->
+
+<div
+  *ngIf="activeModal === 'projects'"
+  id="modal-projects"
+  class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-noir/80 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-projects-title"
+  (click)="onModalBackdropClick($event)"
+>
+  <div
+    class="modal-shell max-h-[90vh] overflow-y-auto"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-head">
+      <h2
+        id="modal-projects-title"
+        class="section-heading"
+      >
+        Projects
+      </h2>
+
+      <button
+        type="button"
+        class="btn-ghost"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="grid gap-5">
+        <article
+          *ngFor="let project of projects"
+          class="glass rounded-2xl p-5"
+        >
+          <!-- Header -->
+          <div
+            class="flex flex-wrap items-start justify-between gap-3"
+          >
+            <div>
+              <div
+                class="mb-2 flex flex-wrap items-center gap-2"
+              >
+                <span class="tag">
+                  {{ project.type }}
+                </span>
+
+                <span class="text-xs text-muted">
+                  {{ project.period }}
+                </span>
+              </div>
+
+              <h3 class="text-base text-cream">
+                {{ project.title }}
+              </h3>
+
+              <p class="mt-1 text-sm text-strawberry-light">
+                {{ project.role }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="mt-5">
+            <p
+              class="mb-2 text-xs uppercase tracking-[0.18em] text-muted"
+            >
+              About the Project
+            </p>
+
+            <p class="text-sm leading-6 text-muted">
+              {{ project.description }}
+            </p>
+          </div>
+
+          <!-- What I Did -->
+          <div class="mt-5">
+            <p
+              class="mb-3 text-xs uppercase tracking-[0.18em] text-muted"
+            >
+              What I Did
+            </p>
+
+            <ul class="space-y-2 text-sm text-muted">
+              <li
+                *ngFor="let bullet of project.bullets"
+                class="border-l border-noir-line pl-3"
+              >
+                {{ bullet }}
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="mt-5">
+            <p
+              class="mb-3 text-xs uppercase tracking-[0.18em] text-muted"
+            >
+              Tech Stack
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span
+                *ngFor="let technology of project.stack"
+                class="tag"
+              >
+                {{ technology }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div
+            *ngIf="project.projectUrl || project.demoUrl"
+            class="mt-5 flex flex-wrap gap-3 border-t border-noir-line pt-4"
+          >
+            <a
+              *ngIf="project.projectUrl"
+              [href]="project.projectUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              View Project ↗
+            </a>
+
+            <a
+              *ngIf="project.demoUrl"
+              [href]="project.demoUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              Live Demo ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- EXPERIENCE MODAL -->
+<!-- ========================================================= -->
+
+<div
+  *ngIf="activeModal === 'experience'"
+  id="modal-experience"
+  class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-noir/80 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-experience-title"
+  (click)="onModalBackdropClick($event)"
+>
+  <div
+    class="modal-shell max-h-[90vh] overflow-y-auto"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-head">
+      <h2
+        id="modal-experience-title"
+        class="section-heading"
+      >
+        Experience
+      </h2>
+
+      <button
+        type="button"
+        class="btn-ghost"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div>
+        <div
+          *ngFor="let job of experience"
+          class="timeline-item"
+        >
+          <span class="timeline-dot"></span>
+
+          <p class="text-xs text-strawberry-light">
+            {{ job.period }}
+          </p>
+
+          <h3 class="mt-1 text-base text-cream">
+            {{ job.role }}
+          </h3>
+
+          <p class="mb-3 text-sm text-muted">
+            {{ job.company }}
+          </p>
+
+          <ul class="space-y-2 text-sm text-muted">
+            <li
+              *ngFor="let bullet of job.bullets"
+              class="border-l border-noir-line pl-3"
+            >
+              {{ bullet }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- CONTACT MODAL -->
+<!-- ========================================================= -->
+
+<div
+  *ngIf="activeModal === 'contact'"
+  id="modal-contact"
+  class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-noir/80 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-contact-title"
+  (click)="onModalBackdropClick($event)"
+>
+  <div
+    class="modal-shell max-h-[90vh] overflow-y-auto"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-head">
+      <h2
+        id="modal-contact-title"
+        class="section-heading"
+      >
+        Contact Me
+      </h2>
+
+      <button
+        type="button"
+        class="btn-ghost"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="space-y-1 text-sm text-muted">
+        <p>
+          Email:
+          <a
+            class="meta-link"
+            href="mailto:jhaime.jose.cando@gmail.com"
+          >
+            jhaime.jose.cando&#64;gmail.com
+          </a>
+        </p>
+
+        <p>
+          LinkedIn:
+          <a
+            class="meta-link"
+            href="https://linkedin.com/in/jhaime"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/jhaime
+          </a>
+        </p>
+      </div>
+
+      <form
+        #contactForm="ngForm"
+        class="mt-6 space-y-4"
+        (ngSubmit)="submitContact(contactForm)"
+      >
+        <!-- Name -->
+        <div>
+          <label
+            class="field-label"
+            for="contact-name"
+          >
+            Name
+          </label>
+
+          <input
+            class="field"
+            type="text"
+            id="contact-name"
+            name="name"
+            placeholder="Your name"
+            required
+            ngModel
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label
+            class="field-label"
+            for="contact-email"
+          >
+            Email
+          </label>
+
+          <input
+            class="field"
+            type="email"
+            id="contact-email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            email
+            ngModel
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label
+            class="field-label"
+            for="contact-message"
+          >
+            Message
+          </label>
+
+          <textarea
+            class="field"
+            id="contact-message"
+            name="message"
+            rows="4"
+            placeholder="What would you like to say?"
+            required
+            ngModel
+          ></textarea>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button
+            type="submit"
+            class="btn-primary"
+            [disabled]="contactForm.invalid"
+          >
+            Send message
+          </button>
+
+          <p
+            class="text-xs text-muted"
+            role="status"
+            aria-live="polite"
+          >
+            {{ contactStatus }}
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

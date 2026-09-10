@@ -1,0 +1,79 @@
+[
+  {
+    "title": "PassIt - URL Shortener",
+    "type": "Personal Project",
+    "role": "Full Stack",
+    "period": "Jul 2026 - Sep 2026",
+    "description": "A URL shortener with VirusTotal-powered safety checking, built as a personal learning project — Angular on the frontend, Supabase (with an Edge Function) on the backend, and the VirusTotal API doing the actual scanning.",
+    "stack": [
+      "Angular",
+      "TailwindCSS",
+      "Supabase",
+      "Deno (Edge Functions)",
+      "VirusTotal API"
+    ],
+    "projectUrl": "https://github.com/jhaime18/pass-it",
+    "demoUrl": "https://pass-it-ten.vercel.app",
+    "bullets": [
+      "Built a full-stack platform that verifies every submitted link's safety before granting access, with rate limiting, and RLS-enforced data access.",
+      "Built secure account settings and a consistent, accessible design system used across every page."
+    ]
+  },
+  {
+    "title": "Enhanced Tabu Search for Optimized Rescue Operations",
+    "type": "Academic Project",
+    "role": "Leader & Developer",
+    "period": "Oct 2023 — May 2025",
+    "description": "A research-driven rescue route optimization system that uses an enhanced Tabu Search algorithm to find efficient evacuation routes while handling large and complex problem spaces.",
+    "stack": [
+      "Python",
+      "Flask",
+      "Jinja",
+      "Bootstrap",
+      "Google Maps API"
+    ],
+    "projectUrl": "",
+    "demoUrl": "",
+    "bullets": [
+      "Led a 3-member team through research documentation and algorithm development, culminating in a successful thesis defense.",
+      "Increased solution diversity by 7–10x by implementing controlled pattern adjustments, cutting the algorithm's tendency to get stuck in suboptimal solutions.",
+      "Accelerated algorithm runtime by 8.7x and improved solution quality by 58% by optimizing evaluation to target only the highest-cost route segments.",
+      "Resolved scalability issues with an adaptive memory mechanism that adjusts automatically to problem size."
+    ]
+  },
+  {
+    "title": "CGrassPLUS",
+    "type": "Academic Project",
+    "role": "Leader & Developer",
+    "period": "Oct 2023 — Mar 2024",
+    "description": "A custom programming language project focused on designing and implementing a simple compiler with a structured multi-layer architecture.",
+    "stack": [
+      "Tkinter",
+      "Python"
+    ],
+    "projectUrl": "",
+    "demoUrl": "",
+    "bullets": [
+      "Led a 5-member team building and documenting a custom programming language, defending the final architecture to a technical panel.",
+      "Developed a three-layer compiler optimized for low time complexity, delivering an efficient, maintainable codebase."
+    ]
+  },
+  {
+    "title": "Web-based Faculty Load and Class Scheduling System",
+    "type": "Academic Project",
+    "role": "Backend Developer",
+    "period": "Jun 2022 — Oct 2022",
+    "description": "A web-based scheduling system designed to centralize faculty loads, course assignments, room allocations, and scheduling data in a single system.",
+    "stack": [
+      "Express.js",
+      "Bootstrap",
+      "MySQL"
+    ],
+    "projectUrl": "",
+    "demoUrl": "",
+    "bullets": [
+      "Architected a centralized database ensuring 100% data integrity across courses, faculty preferences, and room allocations.",
+      "Led code reviews and repository management for clean, consistent integration of development requests, contributing to a successful project defense."
+    ]
+  }
+]
