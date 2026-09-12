@@ -1,5 +1,23 @@
 [
   {
+    "title": "Lapat PDF",
+    "type": "Personal Project",
+    "role": "Developer",
+    "period": "Sep 2026",
+    "description": "A Simple, offline desktop PDF editor for precise image placement and text annotation. Built with Python & PySide6.",
+    "stack": [
+      "Python",
+      "PySide6",
+      "PyInstaller"
+    ],
+    "projectUrl": "https://github.com/jhaime18/LapatPDF",
+    "demoUrl": "",
+    "bullets": [
+      "Built a fast, local-only desktop PDF editor with zero network dependency to ensure complete data privacy and instant execution.",
+      "Implemented multi-page viewing, precise image/text positioning, custom scaling/rotation/opacity, and a dynamic contextual properties panel."
+    ]
+  },
+  {
     "title": "PassIt - URL Shortener",
     "type": "Personal Project",
     "role": "Full Stack",
